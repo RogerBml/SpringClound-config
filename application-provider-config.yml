@@ -1,5 +1,5 @@
 ﻿server:
-  port: 8083
+  port: 8088
 spring:
   profiles: dev
   jpa:
@@ -36,7 +36,7 @@ info:
  
 ---
 server:
-  port: 8082
+  port: 8089
 spring:
   profiles: test
   jpa:
