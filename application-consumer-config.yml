@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8000/eureka
+      defaultZone: http://localhost:8400/eureka
 #开启Feign 对hystrix的支持
 feign:
   hystrix:
@@ -34,7 +34,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8000/eureka
+      defaultZone: http://localhost:8500/eureka
 #开启Feign 对hystrix的支持
 feign:
   hystrix:
