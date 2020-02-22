@@ -1,0 +1,49 @@
+﻿server:
+  port: 8091
+
+spring:
+  application:
+    name: appconsumer
+  profiles: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+#开启Feign 对hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+#设置服务熔断时限，默认为5000毫秒
+hystrix:
+  command:
+    default:
+      excution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+---
+server:
+  port: 8092
+
+spring:
+  application:
+    name: appconsumer
+  profiles: test
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+#开启Feign 对hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+#设置服务熔断时限，默认为5000毫秒
+hystrix:
+  command:
+    default:
+      excution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
