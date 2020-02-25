@@ -1,5 +1,5 @@
 server:
-  port: 8087
+  port: 8801
 spring:
   profiles: dev
   jpa:
@@ -13,7 +13,7 @@ spring:
     username: root
     password: roger
   application:
-    name: appEureka
+    name: loginmcroservice
 logging:
   pattern:
     console: level-%level %msg%n
@@ -36,7 +36,7 @@ info:
  
 ---
 server:
-  port: 8089
+  port: 8802
 spring:
   profiles: test
   jpa:
@@ -46,11 +46,11 @@ spring:
       ddl-auto: none
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql:///test3?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
     username: root
     password: roger
   application:
-    name: appEureka
+    name: loginmcroservice
 logging:
   pattern:
     console: level-%level %msg%n
