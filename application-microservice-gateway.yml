@@ -15,9 +15,12 @@ spring:
     username: guest
 
 zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
   ribbon:
     eager-load:
-      enabled: true
+      enabled: false
   routes:
     somedepart.serviceId: microservice-login
     somedepart.path: /login/**
