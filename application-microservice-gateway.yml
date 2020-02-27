@@ -1,0 +1,30 @@
+﻿server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8600/eureka
+
+spring:
+  application:
+    name: microservice-gateway
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+  routes:
+    somedepart.serviceId: microservice-login
+    somedepart.path: /login/**
+    homepage.serviceId: microservice-homepage
+    homepage.path: /homepage/**
+  ignored-services: "*"
+  prefix: /jxd
+
+
+

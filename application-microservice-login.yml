@@ -1,0 +1,42 @@
+﻿server:
+  port: 8090
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: roger
+  application:
+    name: microservice-login
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+
+logging:
+  pattern:
+    console: level-%level %msg%n
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.decrptor.sql.BasicBinder: trace
+    org.hibernate.hql.internal.ast.exec.BasicExecutor: trace
+    com.sgcc.pms.provider: debug
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8600/eureka
+info:
+  company.name: com.sgcc.pms.jxd
+  company.tel: 17627032752
+  comany.address: china
+  author.name: white
+  app.des: provide03
+
+
