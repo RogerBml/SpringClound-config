@@ -6,9 +6,30 @@ spring:
   application:
     name: config-dev
   profiles: dev
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+  # 允许/actuator/bus-refresh接口被外部调用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 ---
 spring:
   application:
     name: config-test
   profiles: test
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+  # 允许/actuator/bus-refresh接口被外部调用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,4 +1,8 @@
-﻿server:
+﻿spring:
+  application:
+    name: config-dev
+  profiles: dev
+server:
   port: 8600
 eureka:
   instance:
@@ -9,4 +13,18 @@ eureka:
     service-url:
       defaultZone: http://eureka8000.com:8600/eureka
 
-
+---
+spring:
+  application:
+    name: config-dev
+  profiles: test
+server:
+  port: 8700
+eureka:
+  instance:
+    hostname: mircroserice-registory
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka8000.com:8700/eureka
