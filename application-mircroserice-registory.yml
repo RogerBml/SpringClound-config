@@ -2,10 +2,9 @@
   port: 8600
 eureka:
   instance:
-    hostname: localhost
+    hostname: mircroserice-registory
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: http://eureka8000.com:8600/eureka
-
