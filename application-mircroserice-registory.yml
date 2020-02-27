@@ -1,5 +1,19 @@
 ﻿server:
   port: 8600
+  profiles: dev
+eureka:
+  instance:
+    hostname: mircroserice-registory
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka8000.com:8600/eureka
+
+---
+server:
+  port: 8600
+  profiles: dev
 eureka:
   instance:
     hostname: mircroserice-registory
