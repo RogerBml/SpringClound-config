@@ -6,8 +6,18 @@ spring:
   application:
     name: config-dev
   profiles: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 ---
 spring:
   application:
     name: config-test
   profiles: test
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

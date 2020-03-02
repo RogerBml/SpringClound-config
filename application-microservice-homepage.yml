@@ -18,7 +18,11 @@ spring:
     port: 5672
     password: guest
     username: guest
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 logging:
   pattern:
     console: level-%level %msg%n

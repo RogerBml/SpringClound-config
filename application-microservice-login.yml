@@ -32,6 +32,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8600/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 info:
   company.name: com.sgcc.pms.jxd
   company.tel: 17627032752
