@@ -9,11 +9,6 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://eureka8000.com:8600/eureka
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
 ---
 server:
   port: 8600
@@ -26,8 +21,3 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://eureka8000.com:8600/eureka
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
