@@ -27,7 +27,7 @@ zuul:
       enabled: false
   routes:
     somedepart.serviceId: microservice-login
-    somedepart.path: /login/**
+    somedepart.path: /loginbus/**
     homepage.serviceId: microservice-homepage
     homepage.path: /homepage/**
     pgewm.serviceId: microservice-pgewm
