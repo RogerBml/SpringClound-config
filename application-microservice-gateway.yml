@@ -26,6 +26,8 @@ zuul:
     somedepart.path: /login/**
     homepage.serviceId: microservice-homepage
     homepage.path: /homepage/**
+    pgewm.serviceId: microservice-pgewm
+    pgewm.path: /pgewm/**
   ignored-services: "*"
   prefix: /jxd
 
