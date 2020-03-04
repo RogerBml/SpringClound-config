@@ -13,20 +13,20 @@ spring:
     port: 5672
     password: guest
     username: guest
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
+
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+  ribbon:
+    eager-load:
+      enabled: false
   routes:
-    loginservice.serviceId: microservice-login
-    loginservice.path: /loginservice/**
-    homepageservice.serviceId: microservice-homepage
-    homepageservice.path: /homepageservice/**
-    pgewmservice.serviceId: microservice-pgewm
-    pgewmservice.path: /pgewmservice/**
+    somedepart.serviceId: microservice-login
+    somedepart.path: /login/**
+    homepage.serviceId: microservice-homepage
+    homepage.path: /homepage/**
+    pgewm.serviceId: microservice-pgewm
+    pgewm.path: /pgewm/**
   ignored-services: "*"
   prefix: /jxd
-
-
-
