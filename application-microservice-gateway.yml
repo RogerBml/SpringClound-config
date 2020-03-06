@@ -32,3 +32,13 @@ management:
     web:
       exposure:
         include: "*"
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+hystrix:
+  command:
+    default:
+      excution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
