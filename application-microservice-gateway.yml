@@ -18,9 +18,6 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
-  ribbon:
-    eager-load:
-      enabled: false
   routes:
     somedepart.serviceId: microservice-login
     somedepart.path: /login/**
@@ -30,3 +27,6 @@ zuul:
     pgewm.path: /pgewm/**
   ignored-services: "*"
   prefix: /jxd
+ribbon:        #设置ribbon的超时时间小于zuul的超时时间
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
