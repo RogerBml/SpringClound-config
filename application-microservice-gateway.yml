@@ -18,11 +18,6 @@ spring:
       refresh:
         enabled: true
 zuul:
-  host:
-    maxTotalConnections: 10000
-    maxPerRouteConnections: 10000
-    semaphore:
-      max-semaphores: 200
   routes:
     somedepart.serviceId: microservice-login
     somedepart.path: /login/**
