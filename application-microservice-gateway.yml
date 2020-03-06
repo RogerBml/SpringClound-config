@@ -27,6 +27,11 @@ zuul:
     pgewm.path: /pgewm/**
   ignored-services: "*"
   prefix: /jxd
-ribbon:        #设置ribbon的超时时间小于zuul的超时时间
+ribbon:        
   ReadTimeout: 10000
   ConnectTimeout: 10000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
