@@ -21,6 +21,10 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
+    maxTotalConnections: 10000
+    maxPerRouteConnections: 10000
+    semaphore:
+      max-semaphores: 200
   routes:
     somedepart.serviceId: microservice-login
     somedepart.path: /login/**
