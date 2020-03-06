@@ -8,18 +8,3 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://eureka8000.com:8600/eureka
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    password: guest
-    username: guest
-  cloud:
-    bus:
-      refresh:
-        enabled: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
