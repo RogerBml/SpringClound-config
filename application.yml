@@ -1,8 +1,15 @@
-﻿server:
-  port: 9999
+﻿spring:
+  profiles:
+    active: dev
+
+---
 spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    password: guest
-    username: guest
+  application:
+    name: config-dev
+  profiles: dev
+
+---
+spring:
+  application:
+    name: config-test
+  profiles: test
