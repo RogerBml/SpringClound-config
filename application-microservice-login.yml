@@ -13,6 +13,13 @@ spring:
     password: roger
   application:
     name: microservice-login
+  cloud:
+    bus:
+      refresh:
+        enabled: true
+    config:
+      discovery:
+        service-id: configcenter
   rabbitmq:
     host: localhost
     port: 5672
@@ -36,7 +43,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"
 info:
   company.name: com.sgcc.pms.jxd
   company.tel: 17627032752

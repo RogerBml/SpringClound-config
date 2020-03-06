@@ -1,4 +1,4 @@
-server:
+﻿server:
   port: 9000
 eureka:
   client:
@@ -13,7 +13,13 @@ spring:
     port: 5672
     password: guest
     username: guest
-
+  cloud:
+    bus:
+      refresh:
+        enabled: true
+    config:
+      discovery:
+        service-id: configcenter
 zuul:
   host:
     connect-timeout-millis: 15000
@@ -34,4 +40,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"

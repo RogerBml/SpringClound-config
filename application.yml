@@ -1,8 +1,8 @@
-server:
+﻿server:
   port: 9999
 spring:
   application:
-    name: config
+    name: configcenter
   cloud:
     bus:
       enabled: true
@@ -10,4 +10,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"

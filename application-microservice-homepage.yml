@@ -13,6 +13,13 @@ spring:
     password: roger
   application:
     name: microservice-homepage
+  cloud:
+    bus:
+      refresh:
+        enabled: true
+    config:
+      discovery:
+        service-id: configcenter
   rabbitmq:
     host: localhost
     port: 5672
