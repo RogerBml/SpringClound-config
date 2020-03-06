@@ -17,9 +17,6 @@ spring:
     bus:
       refresh:
         enabled: true
-    config:
-      discovery:
-        service-id: configcenter
 zuul:
   host:
     connect-timeout-millis: 15000
